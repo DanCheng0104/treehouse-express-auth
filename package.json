@@ -1,0 +1,25 @@
+{
+  "name": "treehouse-express-auth",
+  "version": "1.0.0",
+  "description": "A project for learning how to add authentication to a web application.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritabradley/treehouse-express-auth.git"
+  },
+  "author": "Treehouse Island. Inc.",
+  "private": true,
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ritabradley/treehouse-express-auth/issues"
+  },
+  "homepage": "https://github.com/ritabradley/treehouse-express-auth#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2"
+  }
+}
