@@ -18,9 +18,10 @@
   },
   "homepage": "https://github.com/ritabradley/treehouse-express-auth#readme",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.12.4",
     "nodemon": "^1.12.1",
-    "pug": "^2.0.0-rc.2"
+    "pug": "^2.0.0-rc.4"
   }
 }
