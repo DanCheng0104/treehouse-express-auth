@@ -2,11 +2,27 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const mongoose = require('mongoose');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
+
 
 //connect 
 mongoose.connect("mongodb://localhost:27017/bookworm");
 const db = mongoose.connection;
 db.on('error',console.error.bind(console,'connection error:'));
+app.use(session({
+  secret: 'treehouse loves you',
+  resave: true,
+  saveUninitialized: false,
+  store: new MongoStore({
+    mongooseConnection : db
+  })
+}));
+//make user ID aval
+app.use(function(req,res,next){
+  res.locals.currentUser = req.session.userId;
+  next();
+});
 
 // parse incoming requests
 app.use(bodyParser.json());
